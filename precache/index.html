@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>precache</title>
+</head>
+<body>
+  <!-- Image -->
+  <img width="300" height="300" src="./images/precache.jpg" />
+  <!-- JavaScript -->
+  <script  src="./js/script.js"></script>
+  <img width="300" height="300" src="./images/hello.png" />
+  
+  <script>
+  // Register the service worker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  }
+  </script>  
+
+  
+</body>
+</html>
