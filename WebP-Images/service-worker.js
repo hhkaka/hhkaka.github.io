@@ -34,3 +34,5 @@ self.addEventListener('fetch', function(event) {
 //1.检查传入的 HTTP 请求是否是 JPEG 或 PNG 类型的图片 2.检查 accept 首部是否支持 WebP  3.浏览器是否支持 WebP？ 4.创建返回 URL
 //上面清单中的代码很多，我们分解来看。最开始的几行，我添加了事件监听器来监听任何触发的 fetch 事件。对于每个发起的 HTTP 请求，我会检查当前请求是否是 JEPG 或 PNG 图片。如果我知道当前请求的是图片，我可以根据传递的 HTTP 首部来返回最适合的内容。在本例中，我检查每个首部并寻找 image/webp 的 mime 类型。一旦知道首部的值，我便能判断出浏览器是否支持 WebP 并返回相应的 WebP 图片。
 //一旦 Service Worker 激活并准备好，对于支持 WebP 的浏览器，任何 JPEG 或 PNG 图片的请求都会返回同样内容的 WebP 图片。如果浏览器不支持 WebP 图片，它不会在 HTTP 请求首部中声明支持，Service Worker 会忽略该请求并继续正常工作。
+
+
