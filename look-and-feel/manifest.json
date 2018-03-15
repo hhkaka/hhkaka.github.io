@@ -1,6 +1,6 @@
 {
   "name": "添加到主屏幕",
-  "short_name": "Progressive Times",
+  "short_name": "显示的添加到主屏幕",
   "start_url": "./index.html",
   "theme_color": "#FFDF00",
   "background_color": "#FFDF00",
